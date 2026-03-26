@@ -1,15 +1,16 @@
 'use client';
 import { useState } from 'react';
 import GlassCard from '@/components/GlassCard';
+import { Timer, CheckCircle2, Send, Flame, XCircle, ArrowRight } from 'lucide-react';
 
 const statusConfig = {
-  pending: { label: '대기', color: 'bg-warning/20 text-warning' },
-  approved: { label: '승인됨', color: 'bg-secondary/20 text-secondary' },
-  published: { label: '발행됨', color: 'bg-primary/20 text-primary' },
-  viral: { label: '🔥 터짐', color: 'bg-danger/20 text-danger' },
-  failed: { label: '실패', color: 'bg-gray-500/20 text-gray-500' },
+  pending: { label: '대기', color: 'bg-warning/20 text-warning', Icon: Timer },
+  approved: { label: '승인됨', color: 'bg-secondary/20 text-secondary', Icon: CheckCircle2 },
+  published: { label: '발행됨', color: 'bg-primary/20 text-primary', Icon: Send },
+  viral: { label: '터짐', color: 'bg-danger/20 text-danger', Icon: Flame },
+  failed: { label: '실패', color: 'bg-gray-500/20 text-gray-500', Icon: XCircle },
 };
-const accountLabel = { main: '👨‍💻 본계', sub1: '🔥 서브1', sub2: '📋 서브2' };
+const accountLabel = { main: '본계', sub1: '서브1', sub2: '서브2' };
 
 const mockQueue = [
   { id: 1, account: 'sub1', preview: 'ChatGPT 쓰면 안 되는 3가지... 🔥 프롬프트 엔지니어링보다 중요한 건...', status: 'pending', time: '15:30' },
@@ -41,7 +42,7 @@ export default function Queue() {
                 <td className="p-4 text-gray-500">{q.id}</td>
                 <td className="p-4">{accountLabel[q.account]}</td>
                 <td className="p-4 max-w-xs truncate">{q.preview}</td>
-                <td className="p-4"><span className={`text-xs px-2 py-1 rounded-full ${statusConfig[q.status].color} ${q.status === 'viral' ? 'viral-glow' : ''}`}>{statusConfig[q.status].label}</span></td>
+                <td className="p-4"><span className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full ${statusConfig[q.status].color} ${q.status === 'viral' ? 'viral-glow' : ''}`}>{statusConfig[q.status].label}</span></td>
                 <td className="p-4 text-gray-400">{q.time}</td>
                 <td className="p-4">
                   <div className="flex gap-1">

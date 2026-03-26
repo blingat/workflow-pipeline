@@ -1,8 +1,10 @@
 'use client';
 import { useState } from 'react';
 import GlassCard from '@/components/GlassCard';
+import { Heart, Repeat2, MessageCircle, Star, Zap, Lightbulb, ArrowLeftRight, TrendingUp } from 'lucide-react';
 
-const typeLabel = { traffic: '🚀 트래픽', insight: '💡 인사이트', counter: '🔄 역발상', trend: '📈 트렌드' };
+const typeLabel = { traffic: '트래픽', insight: '인사이트', counter: '역발상', trend: '트렌드' };
+const typeIcon = { traffic: Zap, insight: Lightbulb, counter: ArrowLeftRight, trend: TrendingUp };
 const filters = ['all', 'traffic', 'insight', 'counter', 'trend'];
 
 const mockPosts = [
@@ -38,11 +40,11 @@ export default function ContentPool() {
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs text-gray-500">@{p.author}</span>
                 <span className="text-xs px-2 py-0.5 bg-white/10 rounded">{typeLabel[p.type]}</span>
-                <span className="text-xs text-primary">⭐ {p.score}</span>
+                <span className="text-xs text-primary flex items-center gap-1"><Star size={10} /> {p.score}</span>
               </div>
               <p className="text-sm mb-2">{p.content}</p>
               <div className="flex gap-4 text-xs text-gray-500">
-                <span>❤️ {p.likes}</span><span>🔄 {p.reposts}</span><span>💬 {p.replies}</span>
+                <span className="flex items-center gap-1"><Heart size={12} /> {p.likes}</span><span className="flex items-center gap-1"><Repeat2 size={12} /> {p.reposts}</span><span className="flex items-center gap-1"><MessageCircle size={12} /> {p.replies}</span>
               </div>
               {p.hook && <div className="mt-2 text-xs bg-secondary/10 text-secondary rounded px-2 py-1">후킹: {p.hook}</div>}
               {p.counter && <div className="mt-1 text-xs bg-warning/10 text-warning rounded px-2 py-1">역발상: {p.counter}</div>}

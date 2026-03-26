@@ -70,7 +70,7 @@ export default function Personas() {
 
       {previewData && (
         <GlassCard>
-          <h3 className="font-bold mb-3">✨ {previewData.name} 미리보기</h3>
+          <h3 className="font-bold mb-3">{previewData.name} 미리보기</h3>
           <div className="space-y-2">
             {previewData.samples.map((s, i) => <div key={i} className="bg-white/5 rounded-lg p-3 text-sm">{s}</div>)}
           </div>

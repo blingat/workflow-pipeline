@@ -1,5 +1,6 @@
 'use client';
 import GlassCard from '@/components/GlassCard';
+import { TrendingUp, Sparkles, BarChart3 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 const trending = [
@@ -24,7 +25,10 @@ export default function Trends() {
       <div className="grid grid-cols-2 gap-6">
         {/* Trending */}
         <GlassCard>
-          <h2 className="text-sm text-gray-400 mb-4">📈 급등 키워드</h2>
+          <div className="flex items-center gap-2 mb-4">
+            <TrendingUp size={14} className="text-gray-500" />
+            <h2 className="text-xs text-gray-400 uppercase tracking-wider">급등 키워드</h2>
+          </div>
           <div className="space-y-3">
             {trending.map((t, i) => (
               <div key={t.keyword} className="flex items-center justify-between bg-white/5 rounded-lg px-4 py-3">
@@ -46,7 +50,10 @@ export default function Trends() {
 
         {/* New keywords */}
         <GlassCard>
-          <h2 className="text-sm text-gray-400 mb-4">🆕 신규 출현 (48h)</h2>
+          <div className="flex items-center gap-2 mb-4">
+            <Sparkles size={14} className="text-gray-500" />
+            <h2 className="text-xs text-gray-400 uppercase tracking-wider">신규 출현 (48h)</h2>
+          </div>
           <div className="space-y-2">
             {newKeywords.map(k => (
               <div key={k} className="flex justify-between items-center bg-white/5 rounded-lg px-4 py-3">
@@ -60,7 +67,10 @@ export default function Trends() {
 
       {/* 7-day chart */}
       <GlassCard>
-        <h2 className="text-sm text-gray-400 mb-4">📊 7일 트렌드 추이</h2>
+        <div className="flex items-center gap-2 mb-4">
+            <BarChart3 size={14} className="text-gray-500" />
+            <h2 className="text-xs text-gray-400 uppercase tracking-wider">7일 트렌드 추이</h2>
+          </div>
         <ResponsiveContainer width="100%" height={200}>
           <BarChart data={weeklyData}>
             <XAxis dataKey="day" tick={{ fill: '#666' }} />

@@ -18,3 +18,26 @@ body { font-family: 'Inter', sans-serif; background: #0a0a1a; color: #e2e8f0; }
 
 @keyframes fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .animate-fade-in { animation: fade-in 0.3s ease-out; }
+
+/* Flowing dot animations for pipeline arrows */
+@keyframes flow-dot-1 {
+  0% { left: 4px; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: calc(100% - 4px); opacity: 0; }
+}
+@keyframes flow-dot-2 {
+  0% { left: 4px; opacity: 0; }
+  20% { opacity: 0.6; }
+  80% { opacity: 0.6; }
+  100% { left: calc(100% - 4px); opacity: 0; }
+}
+@keyframes flow-dot-3 {
+  0% { left: 4px; opacity: 0; }
+  20% { opacity: 0.3; }
+  80% { opacity: 0.3; }
+  100% { left: calc(100% - 4px); opacity: 0; }
+}
+.animate-flow-dot-1 { animation: flow-dot-1 1.2s ease-in-out infinite; top: 50%; transform: translateY(-50%); }
+.animate-flow-dot-2 { animation: flow-dot-2 1.2s ease-in-out 0.3s infinite; top: 50%; transform: translateY(-50%); }
+.animate-flow-dot-3 { animation: flow-dot-3 1.2s ease-in-out 0.6s infinite; top: 50%; transform: translateY(-50%); }

@@ -1,4 +1,5 @@
 'use client';
+import { Trophy, Flame } from 'lucide-react';
 import GlassCard from '@/components/GlassCard';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 
@@ -31,7 +32,7 @@ export default function Analytics() {
 
       <div className="grid grid-cols-2 gap-6">
         <GlassCard>
-          <h2 className="text-sm text-gray-400 mb-4">📊 계정별 일간 발행 수</h2>
+          <h2 className="text-sm text-gray-400 mb-4">BarChart3 계정별 일간 발행 수</h2>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={dailyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
@@ -46,7 +47,7 @@ export default function Analytics() {
         </GlassCard>
 
         <GlassCard>
-          <h2 className="text-sm text-gray-400 mb-4">🏆 페르소나별 평균 성과</h2>
+          <h2 className="text-sm text-gray-400 mb-4">Trophy 페르소나별 평균 성과</h2>
           <div className="space-y-3">
             {personaPerf.map(p => (
               <div key={p.name} className="bg-white/5 rounded-lg px-4 py-3">
@@ -60,7 +61,7 @@ export default function Analytics() {
       </div>
 
       <GlassCard>
-        <h2 className="text-sm text-gray-400 mb-4">🔥 터진 글 TOP 10</h2>
+        <h2 className="text-sm text-gray-400 mb-4">Flame 터진 글 TOP 10</h2>
         <div className="space-y-2">
           {viralPosts.map(p => (
             <div key={p.rank} className="flex items-center gap-4 bg-white/5 rounded-lg px-4 py-3">
