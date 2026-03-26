@@ -23,13 +23,13 @@ export default function Settings() {
         <div className="space-y-3">
           <div className="flex items-center gap-3"><CheckCircle size={18} className="text-primary" /><span className="text-sm">OpenClaw — 연결됨</span></div>
           <div className="flex items-center gap-3"><CheckCircle size={18} className="text-primary" /><span className="text-sm">Neon DB — 연결됨</span></div>
-          <div className="flex items-center gap-3"><AlertTriangle size={18} className="text-warning" /><span className="text-sm">Threads 계정 — 설정 대기</span></div>
+          <div className="flex items-center gap-3"><AlertTriangle size={18} className="text-warning" /><span className="text-sm">SNS 계정 — 설정 대기</span></div>
         </div>
       </GlassCard>
 
-      {/* Threads Accounts */}
+      {/* SNS Accounts */}
       <GlassCard>
-        <h2 className="text-sm text-gray-400 mb-4">Threads 계정</h2>
+        <h2 className="text-sm text-gray-400 mb-4">SNS 계정</h2>
         <div className="space-y-3">
           {['본계 (빠코더)', '서브1 (자유)', '서브2 (업종특화)'].map(a => (
             <div key={a} className="flex items-center justify-between bg-white/5 rounded-lg px-4 py-3">

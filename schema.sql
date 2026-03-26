@@ -1,4 +1,4 @@
--- threads-pipeline DB Schema for Neon PostgreSQL
+-- workflow-pipeline DB Schema for Neon PostgreSQL
 
 -- 1. 수집 게시물
 CREATE TABLE IF NOT EXISTS collected_posts (

@@ -187,7 +187,7 @@ export default function Dashboard() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
-          <p className="text-xs text-gray-500 mt-0.5">Threads Pipeline Monitor</p>
+          <p className="text-xs text-gray-500 mt-0.5">Workflow Pipeline Monitor</p>
         </div>
         <div className="flex items-center gap-4 text-xs text-gray-400">
           <div className="flex items-center gap-1.5"><Clock size={13} /> {now.toLocaleString('ko-KR')}</div>

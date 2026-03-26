@@ -1,5 +1,5 @@
 {
-  "name": "threads-pipeline",
+  "name": "workflow-pipeline",
   "version": "1.0.0",
   "private": true,
   "scripts": {

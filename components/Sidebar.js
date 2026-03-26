@@ -19,7 +19,7 @@ export default function Sidebar() {
   const pathname = usePathname();
   return (
     <aside className="fixed left-0 top-0 h-screen w-60 bg-[rgba(255,255,255,0.03)] border-r border-[rgba(255,255,255,0.08)] flex flex-col py-6 px-3 z-50">
-      <div className="text-primary font-bold text-lg mb-8 px-3 tracking-tight">Threads Pipeline</div>
+      <div className="text-primary font-bold text-lg mb-8 px-3 tracking-tight">Workflow Pipeline</div>
       <nav className="flex-1 space-y-1">
         {nav.map(({ href, label, icon: Icon }) => {
           const active = pathname === href;
