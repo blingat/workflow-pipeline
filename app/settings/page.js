@@ -7,8 +7,6 @@ export default function Settings() {
   const [keywords, setKeywords] = useState(['바이브코딩', 'AI', '자동화', '홈페이지', '외주', 'SaaS', '상세페이지', 'CRM']);
   const [newKw, setNewKw] = useState('');
   const [telegramNotif, setTelegramNotif] = useState(true);
-  const [postizUrl, setPostizUrl] = useState('http://localhost:5000');
-  const [postizKey, setPostizKey] = useState('');
   const [collectInterval, setCollectInterval] = useState('2');
   const [analyzeInterval, setAnalyzeInterval] = useState('6');
 
@@ -24,18 +22,23 @@ export default function Settings() {
         <h2 className="text-sm text-gray-400 mb-4">연결 상태</h2>
         <div className="space-y-3">
           <div className="flex items-center gap-3"><CheckCircle size={18} className="text-primary" /><span className="text-sm">OpenClaw — 연결됨</span></div>
-          <div className="flex items-center gap-3"><AlertTriangle size={18} className="text-warning" /><span className="text-sm">Neon DB — 미연결 (DATABASE_URL 미설정)</span></div>
-          <div className="flex items-center gap-3"><XCircle size={18} className="text-danger" /><span className="text-sm">Postiz — 미연결</span></div>
+          <div className="flex items-center gap-3"><CheckCircle size={18} className="text-primary" /><span className="text-sm">Neon DB — 연결됨</span></div>
+          <div className="flex items-center gap-3"><AlertTriangle size={18} className="text-warning" /><span className="text-sm">Threads 계정 — 설정 대기</span></div>
         </div>
       </GlassCard>
 
-      {/* Postiz */}
+      {/* Threads Accounts */}
       <GlassCard>
-        <h2 className="text-sm text-gray-400 mb-4">Postiz API</h2>
+        <h2 className="text-sm text-gray-400 mb-4">Threads 계정</h2>
         <div className="space-y-3">
-          <div><label className="text-xs text-gray-400">API URL</label><input className="w-full mt-1 px-3 py-2 bg-white/5 border border-white/10 rounded text-sm" value={postizUrl} onChange={e => setPostizUrl(e.target.value)} /></div>
-          <div><label className="text-xs text-gray-400">API Key</label><input type="password" className="w-full mt-1 px-3 py-2 bg-white/5 border border-white/10 rounded text-sm" value={postizKey} onChange={e => setPostizKey(e.target.value)} placeholder="postiz_xxxx" /></div>
+          {['본계 (빠코더)', '서브1 (자유)', '서브2 (업종특화)'].map(a => (
+            <div key={a} className="flex items-center justify-between bg-white/5 rounded-lg px-4 py-3">
+              <span className="text-sm">{a}</span>
+              <span className="text-xs text-warning">미설정</span>
+            </div>
+          ))}
         </div>
+        <p className="text-xs text-gray-600 mt-2">계정 정보는 .env.local에 설정합니다</p>
       </GlassCard>
 
       {/* Keywords */}
