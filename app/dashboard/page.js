@@ -20,7 +20,7 @@ const mockAccounts = [
     published: 15, followers: 1240, persona: '빠코더 전문가',
   },
   {
-    id: 'sub1', name: '자유', role: '난사계', status: 'cooldown', currentStep: 4,
+    id: 'sub1', name: 'AI파카', role: '난사계', status: 'cooldown', currentStep: 4,
     aiModel: 'GLM-5 Turbo', aiCredits: { used: 3800, total: 5000 },
     cycleHours: 2, cooldownSec: 4720, deployedAt: '14:00',
     published: 22, followers: 580, persona: '테크 꿀팁봇',
@@ -34,7 +34,7 @@ const mockAccounts = [
 ];
 
 const mockNextQueue = [
-  { account: '자유', persona: '테크 꿀팁봇', preview: 'ChatGPT 쓰면 안 되는 3가지...', time: '15:30' },
+  { account: 'AI파카', persona: '테크 꿀팁봇', preview: 'ChatGPT 쓰면 안 되는 3가지...', time: '15:30' },
   { account: '업종특화', persona: '자영업 도우미', preview: '식당 홈페이지 이것만 하면 손님 2배...', time: '16:00' },
 ];
 

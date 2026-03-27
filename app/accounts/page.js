@@ -14,7 +14,7 @@ const mockAccounts = [
     published: 15, followers: 1240, persona: 'persona_a', paused: false,
   },
   {
-    id: 'sub1', name: '자유', role: '난사계', status: 'cooldown',
+    id: 'sub1', name: 'AI파카', role: '난사계', status: 'cooldown',
     aiModel: 'GLM-5 Turbo', aiCredits: { used: 3800, total: 5000 },
     cycleHours: 2, cooldownSec: 4720, deployedAt: '14:00',
     published: 22, followers: 580, persona: 'persona_b', paused: false,
