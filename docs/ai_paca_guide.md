@@ -1,9 +1,9 @@
 # AI파카 서브계정 운영 가이드
 
-> 원본: 01_ai_paca_guide.md (사용자 제공)
+> 원본: 01_ai.pacaa_guide.md (사용자 제공)
 
 ## 계정 정보
-- **ID**: ai_paca
+- **ID**: ai.pacaa
 - **표시 이름**: AI파카
 - **캐릭터**: 알파카 (🦙)
 - **플랫폼**: AdsPower 프로필 1
