@@ -2,3 +2,12 @@ node_modules/
 .next/
 .env.local
 *.log
+browser_data/
+checkpoint.png
+shibaai_analysis.json
+shibaai_deep.json
+.aging_processed.json
+.aging_recent_follows.json
+.aging_visited.json
+.aging_trust.json
+tmp/

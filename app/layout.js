@@ -6,9 +6,11 @@ export const metadata = { title: 'Workflow Pipeline', description: '워크플로
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body className="min-h-screen">
+      <body className="min-h-screen bg-[#0a0a1a]">
         <Sidebar />
-        <main className="ml-60 min-h-screen p-8">{children}</main>
+        <main className="md:ml-60 min-h-screen pt-16 md:pt-6 px-4 md:px-8 pb-8">
+          {children}
+        </main>
       </body>
     </html>
   );
